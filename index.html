@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>CSS ANIMATIONS</title>
+</head>
+
+<body>
+    <h1>Animações</h1>
+
+    <h2>Hover (Mouse sobre...)</h2>
+    <section>
+        <div class="area0 item">
+            <p>PARA VERMELHO</p>
+        </div>
+        <div class="area1 item">
+            <p>AUMENTA</p>
+        </div>
+        <div class="area2 item">
+            <p>GIRA EIXO X</p>
+        </div>
+        <div class="area2-1 item">
+            <p>GIRA EIXO Y</p>
+        </div>
+        <div class="area2-2 item">
+            <p>GIRA EIXO Z</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <h2>Transition (Delay)</h2>
+    <section>
+        <div class="area3 item">
+            DELAY
+        </div>
+    </section>
+
+    <hr>
+
+    <h2>Focus</h2>
+    <section>
+        <input type="text" class="inputTxt">
+    </section>
+
+    <hr>
+
+    <h2>ANIMATIONS</h2>
+    <section>
+        <div class="anima1 item">
+            <p>FADE-IN</p>
+        </div>
+        <div class="anima2 item">
+            <p>FADE-OUT</p>
+        </div>
+        <div class="anima3 item">
+            <p>FADE-IN-FADE-OUT</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <h2>SLIDE</h2>
+    <section class="slider">
+        <!-- 1° crie a área onde será trabalhado os slides -->
+        <div class="slides">
+
+            <!-- 2° Botões para navegação-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <!-- 3° Slide Imagens-->
+            <div class="slide first">
+                <img src="./src/img/imagem1.jpg" alt="imagem 1">
+            </div>
+            <div class="slide">
+                <img src="./src/img/imagem2.jpg" alt="imagem 2">
+            </div>
+            <div class="slide">
+                <img src="./src/img/imagem3.jpg" alt="imagem 3">
+            </div>
+            <div class="slide">
+                <img src="./src/img/imagem4.jpg" alt="imagem 4">
+            </div>
+
+            <!-- 4° Navegação manual - linkando um novo botão manual com o input radio-->
+            <div class="manual-nav">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+
+            <!-- 5° Navegação automática-->
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+          
+        </div>
+    </section>
+
+
+
+    <script src="./src/js/index.js"></script>
+</body>
+
+</html>

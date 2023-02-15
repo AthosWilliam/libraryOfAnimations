@@ -1,0 +1,248 @@
+body {
+    margin: 20px 200px 200px;
+    background: rgb(102, 102, 102);
+}
+
+h1,
+h2 {
+    color: white;
+    text-shadow: 0px 3px 5px black;
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    margin: 10px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.area0 {
+    background: rgb(37, 122, 227);
+    transition: 0.5s;
+}
+
+.area0:hover {
+    background: rgb(232, 9, 9);
+    color: white;
+    cursor: pointer;
+}
+
+.area1 {
+    background: rgb(0, 224, 108);
+    transition: 0.3s;
+}
+
+.area1:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.area2,
+.area2-1,
+.area2-2 {
+    background: rgb(232, 145, 6);
+    transition: 1s;
+}
+
+.area2:hover {
+    transform: rotateX(180deg);
+}
+
+.area2-1:hover {
+    transform: rotateY(180deg);
+}
+
+.area2-2:hover {
+    transform: rotateZ(180deg);
+}
+
+.area3 {
+    background: red;
+    transition: width 1s, height 1s 0.5s;
+    color: white;
+}
+
+.area3:hover {
+    width: 300px;
+    height: 180px;
+}
+
+.inputTxt {
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.inputTxt:focus {
+    transform: scaleY(1.5) scaleX(1.5) rotateZ(10deg);
+}
+
+.anima1 {
+    background: rgb(22, 216, 0);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    animation: fadeIn 2s linear infinite;
+    text-align: center;
+}
+
+.anima2 {
+    background: rgb(22, 216, 0);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    animation: fadeOut 2s linear infinite;
+    text-align: center;
+}
+
+.anima3 {
+    background: rgb(22, 216, 0);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    animation: fadeInOut 2s linear infinite;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Criando Slide*/
+.slider {
+    margin: 0 auto;
+    width: 760px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 790px;
+    height: 400px;
+    display: flex;
+}
+
+/* Eles precisam apenas existir, quem vai aparecer é a classe "manual-btn" */
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 790px;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    width: 800px;
+}
+
+.manual-nav {
+    position: absolute;
+    width: 770px;
+    display: flex;
+    justify-content: center;
+    margin-top: 380px;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: white;
+}
+
+/* Quando radio1 estiver checado e ter classe first, acontece: */
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -805px;
+}
+#radio3:checked ~ .first{
+    margin-left: -1600px;
+}
+#radio4:checked ~ .first{
+    margin-left: -2400px;
+}
+
+.nav-auto div {
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-auto {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 770px;
+    margin-top: 381px;
+}
+
+.nav-auto div:not(:last-child) {
+    margin-right: 42px;
+}
+
+/* Quando radio1 estiver checado, a classe auto-btn dentro de nav-auto recebe: */
+#radio1:checked ~ .nav-auto .auto-btn1{
+    background-color: white;
+}
+
+#radio2:checked ~ .nav-auto .auto-btn2{
+    background-color: white;
+}
+#radio3:checked ~ .nav-auto .auto-btn3{
+    background-color: white;
+}
+#radio4:checked ~ .nav-auto .auto-btn4{
+    background-color: white;
+}
